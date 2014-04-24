@@ -28,17 +28,20 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
-using Microsoft.Phone.Controls;
 using System.Windows.Navigation;
+using Microsoft.Phone.Controls;
 
 namespace MovieApp
 {
     public partial class DetailsPage : PhoneApplicationPage
     {
+        // Constructor
         public DetailsPage()
         {
             InitializeComponent();
         }
+
+        // When page is navigated to set data context to selected item in list
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             string selectedIndex = "";

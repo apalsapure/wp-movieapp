@@ -18,20 +18,11 @@
 //
 
 using System;
-using System.ComponentModel;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Collections.ObjectModel;
-
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
 
 namespace MovieApp
 {
@@ -72,9 +63,9 @@ namespace MovieApp
         }
 
         /// <summary>
-        /// Fetches and adds a all ActorItemViewModel objects into the Items collection.
+        /// Creates and adds a few ActorItemViewModel objects into the Items collection.
         /// </summary>
-        public async void LoadData()
+        public void LoadData()
         {
             //this will show the loader
             this.IsDataLoaded = false;
@@ -82,24 +73,17 @@ namespace MovieApp
             //clear the list
             this.Items.Clear();
 
-            //Get all objects of type actor connected to the movie object
-            var results = await _movie.GetConnectedObjectsAsync("acted", 
-                                                                 orderBy: "__utclastupdateddate", 
-                                                                 sortOrder: Appacitive.Sdk.SortOrder.Descending);
-
-            //Iterate over the result object till all the actors are fetched
-            while (true)
-            {
-                //converting appacitive object to model
-                results.ForEach(r => this.Items.Add(new ActorItemViewModel(r)));
-
-                //check if its last set of record
-                if (results.IsLastPage)
-                    break;
-
-                //fetch next set of record
-                results = await results.NextPageAsync();
-            }
+            // Sample data; replace with real data
+            this.Items.Add(new ActorItemViewModel() { Name = "John one", FaceUrl = "/Assets/Sample/actor.png", });
+            this.Items.Add(new ActorItemViewModel() { Name = "John two", FaceUrl = "/Assets/Sample/actor.png", });
+            this.Items.Add(new ActorItemViewModel() { Name = "John three", FaceUrl = "/Assets/Sample/actor.png" });
+            this.Items.Add(new ActorItemViewModel() { Name = "John four", FaceUrl = "/Assets/Sample/actor.png" });
+            this.Items.Add(new ActorItemViewModel() { Name = "John five", FaceUrl = "/Assets/Sample/actor.png" });
+            this.Items.Add(new ActorItemViewModel() { Name = "John six", FaceUrl = "/Assets/Sample/actor.png" });
+            this.Items.Add(new ActorItemViewModel() { Name = "John seven", FaceUrl = "/Assets/Sample/actor.png" });
+            this.Items.Add(new ActorItemViewModel() { Name = "John eight", FaceUrl = "/Assets/Sample/actor.png" });
+            this.Items.Add(new ActorItemViewModel() { Name = "John nine", FaceUrl = "/Assets/Sample/movie.png" });
+            this.Items.Add(new ActorItemViewModel() { Name = "John ten", FaceUrl = "/Assets/Sample/movie.png" });
 
             //this will hide the loader
             this.IsDataLoaded = true;

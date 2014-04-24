@@ -1,5 +1,5 @@
 ﻿//
-//  MovieItemViewModel.cs
+//  MainViewModel.cs
 //  Appacitive Quickstart
 //
 //  Copyright 2014 Appacitive, Inc.
@@ -32,13 +32,12 @@ using System.Windows.Shapes;
 
 namespace MovieApp
 {
-    public class MovieItemViewModel : Appacitive.Sdk.APObject
+    public class MovieItemViewModel : INotifyPropertyChanged
     {
-        //special constructor
-        public MovieItemViewModel(Appacitive.Sdk.APObject existing)
-            : base(existing)
-        { }
+        //unique Id
+        public string Id { get; set; }
 
+        private string _name;
         /// <summary>
         /// Name ViewModel property; this property is used in the view to display its value using a Binding.
         /// </summary>
@@ -47,18 +46,19 @@ namespace MovieApp
         {
             get
             {
-                return this.Get<string>("name");
+                return _name;
             }
             set
             {
-                if (value != this.Name)
+                if (value != this._name)
                 {
-                    this.Set<string>("name", value);
+                    _name = value;
                     NotifyPropertyChanged("Name");
                 }
             }
         }
 
+        private string _faceUrl;
         /// <summary>
         /// FaceUrl ViewModel property; this property is used in the view to display its value using a Binding.
         /// </summary>
@@ -67,13 +67,13 @@ namespace MovieApp
         {
             get
             {
-                return this.Get<string>("posterurl");
+                return _faceUrl;
             }
             set
             {
-                if (value != this.FaceUrl)
+                if (value != _faceUrl)
                 {
-                    this.Set<string>("poasterurl", value);
+                    _faceUrl = value;
                     NotifyPropertyChanged("FaceUrl");
                 }
             }
@@ -87,7 +87,7 @@ namespace MovieApp
         {
             get
             {
-                return this.CreatedAt.ToString("MMMM dd, yyyy");
+                return DateTime.Now.AddDays(-1).ToString("MMMM dd, yyyy");
             }
         }
 

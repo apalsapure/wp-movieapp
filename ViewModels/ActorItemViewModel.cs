@@ -18,27 +18,16 @@
 //
 
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Ink;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
+using System.Linq;
+using System.Text;
 
 namespace MovieApp
 {
-    public class ActorItemViewModel : Appacitive.Sdk.APObject
+    public class ActorItemViewModel : INotifyPropertyChanged
     {
-        //special constructor
-        public ActorItemViewModel(Appacitive.Sdk.APObject existing)
-            : base(existing)
-        { }
-
+        private string _name;
         /// <summary>
         /// Name ViewModel property; this property is used in the view to display its value using a Binding.
         /// </summary>
@@ -47,18 +36,19 @@ namespace MovieApp
         {
             get
             {
-                return this.Get<string>("name");
+                return _name;
             }
             set
             {
-                if (value != this.Name)
+                if (value != this._name)
                 {
-                    this.Set<string>("name", value);
+                    _name = value;
                     NotifyPropertyChanged("Name");
                 }
             }
         }
 
+        private string _faceUrl;
         /// <summary>
         /// FaceUrl ViewModel property; this property is used in the view to display its value using a Binding.
         /// </summary>
@@ -67,13 +57,13 @@ namespace MovieApp
         {
             get
             {
-                return this.Get<string>("picurl");
+                return _faceUrl; 
             }
             set
             {
-                if (value != this.FaceUrl)
+                if (value != _faceUrl)
                 {
-                    this.Set<string>("picurl", value);
+                    _faceUrl = value;
                     NotifyPropertyChanged("FaceUrl");
                 }
             }
@@ -87,7 +77,7 @@ namespace MovieApp
         {
             get
             {
-                return this.CreatedAt.ToString("MMMM dd, yyyy");
+                return DateTime.Now.AddDays(-1).ToString("MMMM dd, yyyy");
             }
         }
 

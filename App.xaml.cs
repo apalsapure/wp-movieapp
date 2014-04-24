@@ -100,8 +100,6 @@ namespace MovieApp
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
-            //Initialize the SDK
-            Appacitive.Sdk.App.Initialize(Appacitive.Sdk.Platforms.WP7, "56655564046992340", "1+IjYhgSwEG33txpehbTpw==", Appacitive.Sdk.Environment.Sandbox);
         }
 
         // Code to execute when the application is activated (brought to foreground)
