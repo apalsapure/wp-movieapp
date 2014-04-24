@@ -1,8 +1,8 @@
-﻿<xapCache source="D:\Gossamer\Samples\Windows\Phone\MovieApp\MovieApp\Bin\Debug\MovieApp.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="4/18/2014 7:54:29 PM">
+﻿<xapCache source="D:\Gossamer\Samples\Windows\Phone\MovieApp\MovieApp\Bin\Debug\MovieApp.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="4/24/2014 9:13:14 AM">
   <file source="D:\Gossamer\Samples\Windows\Phone\MovieApp\MovieApp\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="4/18/2014 6:20:49 PM" />
   <file source="D:\Gossamer\Samples\Windows\Phone\MovieApp\MovieApp\Assets\appbar.smiley.kiki.png" archivePath="Assets\appbar.smiley.kiki.png" lastWriteTime="4/18/2014 6:19:46 PM" />
   <file source="D:\Gossamer\Samples\Windows\Phone\MovieApp\MovieApp\Assets\appbar.smiley.kiki.png" archivePath="Assets\appbar.smiley.kiki.png" lastWriteTime="4/18/2014 6:19:46 PM" />
-  <file source="D:\Gossamer\Samples\Windows\Phone\MovieApp\MovieApp\obj\Debug\MovieApp.dll" archivePath="MovieApp.dll" lastWriteTime="4/18/2014 7:54:28 PM" />
+  <file source="D:\Gossamer\Samples\Windows\Phone\MovieApp\MovieApp\obj\Debug\MovieApp.dll" archivePath="MovieApp.dll" lastWriteTime="4/24/2014 9:13:14 AM" />
   <file source="D:\Gossamer\Samples\Windows\Phone\MovieApp\packages\Appacitive.0.9.8\lib\sl3-wp\Appacitive.Sdk.WindowsPhone7.dll" archivePath="Appacitive.Sdk.WindowsPhone7.dll" lastWriteTime="4/18/2014 1:40:48 PM" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="7/6/2012 1:40:16 AM" />
   <file source="D:\Gossamer\Samples\Windows\Phone\MovieApp\packages\Microsoft.Bcl.Async.1.0.16\lib\sl4-windowsphone71\Microsoft.Threading.Tasks.dll" archivePath="Microsoft.Threading.Tasks.dll" lastWriteTime="4/18/2014 1:40:47 PM" />
