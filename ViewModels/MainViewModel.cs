@@ -82,7 +82,7 @@ namespace MovieApp
 
             //Get all objects of type movie
             var results = await Appacitive.Sdk.APObjects.FindAllAsync("movie",
-                                                                       orderBy: "__utclastupdateddate",
+                                                                       orderBy: "__id",
                                                                        sortOrder: Appacitive.Sdk.SortOrder.Descending);
 
             //Iterate over the result object till all the movies are fetched

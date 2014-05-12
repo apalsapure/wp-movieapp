@@ -101,7 +101,7 @@ namespace MovieApp
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
             //Initialize the SDK
-            Appacitive.Sdk.App.Initialize(Appacitive.Sdk.Platforms.WP7, "56655564046992340", "1+IjYhgSwEG33txpehbTpw==", Appacitive.Sdk.Environment.Sandbox);
+            Appacitive.Sdk.AppContext.Initialize("{{APP Id}}", "{{API Key}}", Appacitive.Sdk.Environment.Sandbox);
         }
 
         // Code to execute when the application is activated (brought to foreground)

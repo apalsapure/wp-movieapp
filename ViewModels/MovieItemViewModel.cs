@@ -54,7 +54,7 @@ namespace MovieApp
                 if (value != this.Name)
                 {
                     this.Set<string>("name", value);
-                    NotifyPropertyChanged("Name");
+                    base.FirePropertyChanged("Name");
                 }
             }
         }
@@ -74,7 +74,7 @@ namespace MovieApp
                 if (value != this.FaceUrl)
                 {
                     this.Set<string>("poasterurl", value);
-                    NotifyPropertyChanged("FaceUrl");
+                    base.FirePropertyChanged("FaceUrl");
                 }
             }
         }
@@ -88,16 +88,6 @@ namespace MovieApp
             get
             {
                 return this.CreatedAt.ToString("MMMM dd, yyyy");
-            }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void NotifyPropertyChanged(String propertyName)
-        {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (null != handler)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
             }
         }
     }

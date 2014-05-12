@@ -61,7 +61,7 @@
                                 <ListBoxItem HorizontalContentAlignment="Stretch">
                                     <Grid Margin="0 0 0 10" d:LayoutOverrides="Height" UseLayoutRounding="True">
                                         <Grid.RowDefinitions>
-                                            <RowDefinition Height="120" />
+                                            <RowDefinition Height="140" />
                                         </Grid.RowDefinitions>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="85"/>
